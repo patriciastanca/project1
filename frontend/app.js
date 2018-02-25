@@ -3,7 +3,7 @@
 document.getElementById('search-button').onclick = function()
 {
     location.href = document.getElementById('search-text').value;
-    console.log("location.href");
+    console.log(document.getElementById('search-text').value);
 };
 //}
 
