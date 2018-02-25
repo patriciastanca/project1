@@ -13,6 +13,15 @@ http.listen(port, function() {
   console.log('listening on *:' + port);
 });
 
+require("jsdom").env("", function(err, window) {
+	if (err) {
+		console.error(err);
+		return;
+	}
+
+	var $ = require("jquery")(window);
+});
+
 var main = function() {
 document.getElementById('search-button').onclick = function()
 {
