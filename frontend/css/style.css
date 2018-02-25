@@ -8,6 +8,7 @@ body {
     position: absolute;
     height: 10em; 
     margin-top: 10em;
+    margin-left: auto;
     top: 50%;  
 }
 
