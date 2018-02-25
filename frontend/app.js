@@ -8,6 +8,17 @@ document.getElementById('search-button').onclick = function()
   console.log(document.getElementById('search-text').value);
   console.log(location.href);
 };
+
+function fillField(input,val) {
+    if(input.value == "")
+       input.value=val;
+  };
+  
+  function clearField(input,val) {
+    if(input.value == val)
+       input.value="";
+  };
+  
 }
 
 $(document).ready(main);
