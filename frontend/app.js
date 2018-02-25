@@ -9,6 +9,7 @@ document.getElementById('search-button').onclick = function()
   console.log(location.href);
 };
 }
+$(document).ready(main);
 
 function fillField(input,val) {
     if(input.value == "")
@@ -19,5 +20,3 @@ function fillField(input,val) {
     if(input.value == val)
        input.value="";
   };
-
-$(document).ready(main);
