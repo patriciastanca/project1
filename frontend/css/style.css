@@ -3,6 +3,7 @@ body {
     height: 100%;
 }
 
-input { 
-    align: right; 
+.page-elements { 
+    margin: auto;
+    width: 50%;
 }
