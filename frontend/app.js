@@ -1,5 +1,15 @@
-//var main = function() {
-    //to do
+var main = function() {
+    
+function fillField(input,val) {
+    if(input.value == "")
+       input.value=val;
+};
+
+function clearField(input,val) {
+    if(input.value == val)
+       input.value="";
+};
+
 document.getElementById('search-button').onclick = function()
 {
     var input_value = document.getElementById('search-text').value;
@@ -8,6 +18,7 @@ document.getElementById('search-button').onclick = function()
     console.log(document.getElementById('search-text').value);
     console.log(location.href);
 };
-//}
 
-//$(document).ready(main);
+}
+
+$(document).ready(main);
