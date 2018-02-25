@@ -7,7 +7,7 @@ body {
 .page-elements { 
     position: absolute;
     height: 5em; 
-    margin-top: auto;
+    margin-top: 5em;
     margin-left: 5em;
     top: 50%;  
 }
