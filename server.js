@@ -13,7 +13,6 @@ http.listen(port, function() {
   console.log('listening on *:' + port);
 });
 
-var main = function() {
 document.getElementById('search-button').onclick = function()
 {
   var input_value = document.getElementById('search-text').value;
@@ -22,6 +21,3 @@ document.getElementById('search-button').onclick = function()
   console.log(document.getElementById('search-text').value);
   console.log(location.href);
 };
-
-}
-$(document).ready(main);
