@@ -2,3 +2,7 @@ body {
     background-image: url("daisy.jpg");
     height: 100%;
 }
+
+input { 
+    text-align: right; 
+}
