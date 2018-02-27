@@ -3,7 +3,8 @@ $(document).ready(function() {
     {
       var input_value = document.getElementById('search-text').value;
       location.href = "https://giphy.com/" + input_value;
-    
+      document.getElementById('search-text').value = "Search for...";
+
       console.log(document.getElementById('search-text').value);
       console.log(location.href);
     };
@@ -19,6 +20,6 @@ function fillField(input,val) {
        input.value="";
   };
 
-  function setDefaultValueForSearchField(){
-    document.getElementById('search-text').value = "Search for...";
-  }
+  //function setDefaultValueForSearchField(){
+  //  document.getElementById('search-text').value = "Search for...";
+  //}
