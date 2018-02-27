@@ -19,7 +19,6 @@ function fillField(input,val) {
        input.value="";
   };
 
-  function clearSearchField(){
-      if (document.getElementById('search-text').value !="")
-      document.getElementById('search-text').value = "";
+  function setDefaultValueForSearchField(){
+    document.getElementById('search-text').value = "Search for...";
   }
