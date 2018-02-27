@@ -20,6 +20,6 @@ function fillField(input,val) {
   };
 
   function clearSearchField(){
-      if (document.getElementById('search-text').value !=="")
-      document.getElementById('search-text').value == "";
+      if (document.getElementById('search-text').value !="")
+      document.getElementById('search-text').value = "";
   }
