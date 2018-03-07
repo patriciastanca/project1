@@ -7,13 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-
-  "standard":{
+  "standard": {
     "globals": [
       "$"
     ]
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patriciastanca/project1.git"
@@ -29,6 +27,7 @@
   "homepage": "https://github.com/patriciastanca/project1#readme",
   "dependencies": {
     "jquery": "^3.3.1",
-    "jsdom": "^11.6.2"
+    "jsdom": "^11.6.2",
+    "socket-io": "^1.0.0"
   }
 }

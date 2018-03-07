@@ -5,10 +5,23 @@ var app = express();
 
 var http = require('http').Server(app);
 
+var io = require("socket.io")(http);
+
 var port = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, './frontend')));
+io.sockets.on("connection", function(socket){
+  console.log(socket.id); 
+  socket.on("Heeeeey", function(message){
+    console.log ("It works!");
+    socket.emit('Welcome','HELLO');
+  });
+  socket.on("query", function(message){
+    console.log (message);
+  });
+});
 
 http.listen(port, function() {
   console.log('listening on *:' + port);
 });
+
