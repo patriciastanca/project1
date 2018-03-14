@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/patriciastanca/project1#readme",
   "dependencies": {
+    "giphy-js-sdk-core": "^1.0.3",
     "jquery": "^3.3.1",
     "jsdom": "^11.6.2",
     "socket-io": "^1.0.0"
