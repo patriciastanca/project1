@@ -2,23 +2,36 @@ $(document).ready(function() {
     var socket = io();
     window.socket = socket;
 
-    document.getElementById('search-button').onclick = function()
-    {
-      var input_value = document.getElementById('search-text').value;
-      //location.href = "https://giphy.com/" + input_value;
-      console.log(document.getElementById('search-text').value);
+    var search_button = document.getElementById('search-button');
+    var search_field = document.getElementById('search-text');
+    var result_field = document.getElementById('result-field');
 
+    search_button.onclick = function()
+    {
+      var input_value = search_field.value;
       socket.emit('query',input_value);
-      document.getElementById('search-text').value = "Search for...";
+      search_field.value = "Search for...";
     };
 
     socket.on('return_gif', function(message){
         console.log(message);
-        //location.href = message;
         var gif_url = message;
-        document.getElementById('kitty').src = gif_url;
+
+        if (gif_url != undefined) {
+            result_field.src = gif_url;
+        } else {
+            result_field.src = "css/oops.jpeg";
+        }
+        
     });
 
+    search_field.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 13){
+            search_button.click();
+            search_button.focus();
+        }
+    });
      //socket.emit('Heeeeey','Hello');
    // socket.on('Welcome', function(message){
        // console.log(message);

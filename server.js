@@ -22,19 +22,29 @@ io.sockets.on("connection", function(socket){
   //});
 
   socket.on('query', function(message){
-    console.log(message);
+    console.log("The search keyword inserted by the user is: ", message);
 
-    //search for a gif
-    client.search('gifs', {"q": message, "limit": 1}).then((response)=> {
+    //declare the array that will contain the list of gif urls returned by the search
+    var gif_results = [];
+
+    //search for gifs that match the search keyword
+    client.search('gifs', {"q": message}).then((response)=> {
       response.data.forEach((gifObject) => {
-        console.log(gifObject);
-        socket.emit('return_gif', gifObject.embed_url);
-
-        console.log("Gif name: ", gifObject.title);
-        console.log("Gif URL: ", gifObject.url);
+        gif_results.push(gifObject.embed_url);
       });
+
+      console.log("The array of gifs that match the search keyword: ", gif_results);
+      console.log("The length of the array of gifs that match the search keyword: ", gif_results.length);
+
+    //select a random gif from the array of gifs returned by the search
+    var selected_random_gif_url = gif_results[Math.floor(Math.random() * gif_results.length)];
+    console.log("The URL of the randomly selected gif is:", selected_random_gif_url);
+
+    //emit the selected random gif, even if it is undefined
+    socket.emit('return_gif', selected_random_gif_url);
     })
     .catch((err) => {
+      console.log("The followin error was encountered:", err);
     });
   });
 });
