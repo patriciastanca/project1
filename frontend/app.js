@@ -20,7 +20,7 @@ $(document).ready(function() {
         if (gif_url != undefined) {
             result_field.src = gif_url;
         } else {
-            result_field.src = "css/oops.jpeg";
+            result_field.src = "css/oops_robot.jpg";
         }
         
     });
