@@ -31,6 +31,7 @@ io.sockets.on("connection", function(socket){
     client.search('gifs', {"q": message}).then((response)=> {
       response.data.forEach((gifObject) => {
         gif_results.push(gifObject.embed_url);
+        console.log("patriiiii", gifObject);
       });
 
       console.log("The array of gifs that match the search keyword: ", gif_results);

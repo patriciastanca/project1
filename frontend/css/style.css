@@ -1,19 +1,45 @@
+head {
+    opacity: 0.5;
+}
 body {
     background-image: url("black_wallpaper.jpg");
-    height: 50%;
     position: relative;
 }
 
 .page-elements { 
     /* position: absolute; */
+    position: relative;
     height: 5em; 
     margin-top: 5em;
     margin-left: 5em;
     top: 50%;
-    color: white;  
+}
+#search-text{
+   width: 600px; 
+   height: 52px;
+   border-style: outset;
+   border-width: medium;
+   border-color:white;
+   background-color:white;
+   opacity: 0.3;
+   color: #000; /* Fallback for older browsers */
+   color: rgba(0, 0, 0, 1);
 }
 
 #search-button {
-    font-size: 26px;
+    font-size: 28px;
+    position: absolute;
+    border-style: outset;
+    border-width: medium;
+    border-color:white;
+    opacity: 0.4;
+    color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 1); 
+}
+
+#result-field {
+    width: 800px; 
+    height: 680px;
+    border: none;
 }
 
